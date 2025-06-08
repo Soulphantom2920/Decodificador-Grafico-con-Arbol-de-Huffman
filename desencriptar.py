@@ -6,23 +6,23 @@ def leer_cabecera(nombre_archivo):
 
     puntero = 0
 
-    # 1. Leer los primeros 4 bytes: cantidad de caracteres únicos
-    cantidad = int.from_bytes(datos[puntero:puntero+4], byteorder='big')
+    #Leer los primeros 4 bytes: cantidad de caracteres únicos
+    cantidad = int.from_bytes(datos[puntero:puntero+4], byteorder="big")
     puntero += 4
 
     frecuencias = {}
     for _ in range(cantidad):
         char = chr(datos[puntero])
         puntero += 1
-        freq = int.from_bytes(datos[puntero:puntero+2], byteorder='big')
+        freq = int.from_bytes(datos[puntero:puntero+2], byteorder="big")
         puntero += 2
         frecuencias[char] = freq
 
-    # 2. Leer el byte de padding
+    #Leer el byte de padding
     padding = datos[puntero]
     puntero += 1
 
-    # 3. Leer el cuerpo codificado (el resto del archivo)
+    #Leer el cuerpo codificado
     cuerpo_codificado = datos[puntero:]
 
     return frecuencias, cuerpo_codificado, padding

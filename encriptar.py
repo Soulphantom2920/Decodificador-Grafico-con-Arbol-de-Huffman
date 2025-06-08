@@ -20,13 +20,13 @@ def empaquetar_bits(bits):
 def guardar_binario(nombre_archivo, frecuencias, bytes_codificados, padding):
     with open(nombre_archivo, "wb") as f:
         cantidad_caracteres = len(frecuencias)
-        f.write(cantidad_caracteres.to_bytes(4, byteorder='big'))  # 4 bytes
+        f.write(cantidad_caracteres.to_bytes(4, byteorder="big")) 
 
         for char, freq in frecuencias.items():
-            f.write(char.encode('utf-8'))         # 1 byte
-            f.write(freq.to_bytes(2, byteorder='big'))  # 2 bytes
+            f.write(char.encode('utf-8'))         
+            f.write(freq.to_bytes(2, byteorder='big'))  
 
-        f.write(bytes([padding]))  # 1 byte
+        f.write(bytes([padding]))
 
         f.write(bytes_codificados)
 
