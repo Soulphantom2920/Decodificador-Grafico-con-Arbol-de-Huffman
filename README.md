@@ -7,20 +7,20 @@
   <img src="https://img.shields.io/badge/Institución-TEC%20Costa%20Rica-darkgreen?style=for-the-badge" alt="TEC Costa Rica">
 </p>
 
-> Proyecto final para el curso **Taller de Programación** del **[Instituto Tecnológico de Costa Rica](https://www.tec.ac.cr/)**. [cite_start]Una herramienta educativa diseñada para visualizar el funcionamiento interno del algoritmo de decodificación de Huffman. [cite: 1, 2, 3, 4]
+> Proyecto final para el curso **Taller de Programación** del **[Instituto Tecnológico de Costa Rica](https://www.tec.ac.cr/)**. Una herramienta educativa diseñada para visualizar el funcionamiento interno del algoritmo de decodificación de Huffman.
 
 ---
 
 ## 🎯 Sobre el Proyecto
 
-[cite_start]Esta aplicación permite cifrar mensajes de texto en archivos binarios y, lo más importante, descifrarlos visualmente. [cite: 8] [cite_start]Al cargar un archivo `.bin`, el programa reconstruye el árbol de Huffman utilizado para la codificación y muestra una animación paso a paso de cómo se recorre para reconstruir el mensaje original. [cite: 8, 12]
+Esta aplicación permite cifrar mensajes de texto en archivos binarios y, lo más importante, descifrarlos visualmente. Al cargar un archivo `.bin`, el programa reconstruye el árbol de Huffman utilizado para la codificación y muestra una animación paso a paso de cómo se recorre para reconstruir el mensaje original.
 
 ### ✨ Características Principales
 
-- [cite_start]**Cifrado de Mensajes:** Convierte un texto en un archivo `.bin` compacto usando el algoritmo de Huffman. [cite: 10]
-- [cite_start]**Decodificación desde Archivo:** Lee un archivo `.bin` y reconstruye el mensaje original. [cite: 11]
-- [cite_start]**Visualización del Árbol:** Dibuja dinámicamente el árbol de Huffman completo basado en las frecuencias de caracteres del archivo. [cite: 12]
-- [cite_start]**Animación del Proceso:** Ilustra visualmente el recorrido del árbol bit a bit, mostrando el camino tomado para encontrar cada carácter. [cite: 12]
+- **Cifrado de Mensajes:** Convierte un texto en un archivo `.bin` compacto usando el algoritmo de Huffman. 
+- **Decodificación desde Archivo:** Lee un archivo `.bin` y reconstruye el mensaje original. 
+- **Visualización del Árbol:** Dibuja dinámicamente el árbol de Huffman completo basado en las frecuencias de caracteres del archivo. 
+- **Animación del Proceso:** Ilustra visualmente el recorrido del árbol bit a bit, mostrando el camino tomado para encontrar cada carácter. 
 - **Interfaz Gráfica Intuitiva:** Desarrollado con **PyQt6** para una experiencia de usuario clara y funcional.
 
 ### 🎨 La Visualización Animada
@@ -39,13 +39,13 @@ La característica central de este proyecto es la animación del proceso de deco
 ## 📂 Estructura del Archivo .bin
 El archivo binario generado por el programa sigue una estructura específica para permitir la reconstrucción del árbol y del mensaje:
 
-Cantidad de Caracteres (4 bytes): Un entero que indica cuántos caracteres únicos hay en la tabla de frecuencias.
+1. Cantidad de Caracteres (4 bytes): Un entero que indica cuántos caracteres únicos hay en la tabla de frecuencias.
 
-Tabla de Frecuencias (Variable): Una secuencia de 1 byte para el carácter (ASCII) seguido de 2 bytes para su frecuencia.
+2. Tabla de Frecuencias (Variable): Una secuencia de 1 byte para el carácter (ASCII) seguido de 2 bytes para su frecuencia.
 
-Bits de Relleno (1 byte): Un entero que indica cuántos bits se añadieron al final del último byte para completar los 8 bits (padding).
+3. Bits de Relleno (1 byte): Un entero que indica cuántos bits se añadieron al final del último byte para completar los 8 bits (padding).
 
-Mensaje Codificado (Resto del archivo): La secuencia de bits que representa el mensaje cifrado.
+4. Mensaje Codificado (Resto del archivo): La secuencia de bits que representa el mensaje cifrado.
 
 ---
 
