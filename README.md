@@ -55,8 +55,7 @@ Para ejecutar este proyecto, sigue estos pasos:
 
 **1. Clona el Repositorio**:
 ```bash
-git clone [https://github.com/TuUsuario/NombreDelRepo.git](https://github.com/TuUsuario/NombreDelRepo.git)
-cd NombreDelRepo
+git clone
 ```
 **2. Instala las Dependencias**. El proyecto requiere PyQt6. Puedes instalarlo usando pip:
 ```Bash
